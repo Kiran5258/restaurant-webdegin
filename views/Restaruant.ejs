@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eatwell </title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/restaruants.css">
+</head>
+<body>
+    <header>
+        <div id="logo"><a href="/">Eatwell</a></div>
+        <nav>
+            <ul>
+                <li id="nav-item"><a href="/Restaruant">Browser Restaruant</a></li>
+                <li id="nav-item"><a href="/recommend">Share a Restaruant</a></li>
+                <li id="nav-item"><a href="/about">About us</a></li>
+            </ul>
+    </header>
+    <main>
+        <% if(numberofrestaruant === 0){ %>
+            <p>Unfortunately,There is no restaruant is registered</p>
+            <% }else{ %>
+            <p>find your next favourite restaruants registered</p>
+            <p> we found <%= numberofrestaruant %> restaruants</p>
+            <ol id="list-items">
+            <% for(const restaruant of restaruants){ %>
+                <li id="restaruant-tem">
+                    <h1><%= restaruant.name %></h1>
+                </li>
+                <div class="restaruant-meta">
+                    <p><%= restaruant.cuisine %></p>
+                    <p><%= restaruant.Address %></p>
+                </div>        
+                <% } %>
+            </ol>
+            <% } %>
+        </ol>    
+    </main>
+</body>
+</html>

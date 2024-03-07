@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eatwell </title>
+    <link rel="stylesheet" href="styles/restaruants.css">
+</head>
+<body>
+    <header>
+        <div id="logo"><a href="/">Eatwell</a></div>
+        <nav>
+            <ul>
+                <li id="nav-item"><a href="/Restaruant">Browser Restaruant</a></li>
+                <li id="nav-item"><a href="/recommend">Share a Restaruant</a></li>
+                <li id="nav-item"><a href="/about">About us</a></li>
+            </ul>
+    </header>
+    <main>
+    <h1>Share your recommendation</h1>
+    <form action="/recommend" method="POST">
+            <div class="form-item">
+                <label for="name">Restaruant Name</label>
+                <input class="text" name="name" required>
+            </div>
+            <div class="form-item">
+                <label for="Address">Restaruant Address</label>
+                <input class="text" name="Address" required>
+            </div>
+            <div class="form-item">
+                <label for="cuisine">Type of cuisine</label>
+                <input class="Address" name="cuisine" required>
+            </div>
+            <div class="form-item">
+                <label for="Restaruant website">Restaruant website</label>
+                <input class="text" name="website" required>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </main>
+</body>
+</html>
